@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_4</title>
+</head>
+<body>
+    <script>
+        var hasCash = true;
+        var cashAmount = 15;
+        var hasDebitCard = true;
+        var DebiCardAmount = 500;
+        var total = 20;
+
+        if ((hasCash && cashAmount >= total) || (hasDebitCard && DebiCardAmount >= total)){
+        alert('Can buy goods!');
+        }else {
+        alert('Sorry you cannot buy goods');
+        }
+    </script>
+</body>
+</html>
