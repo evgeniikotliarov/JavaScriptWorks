@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_7</title>
+</head>
+<body>
+    <script>
+        var firstNumber = Math.floor(Math.random() * 9 + 1);
+        var secondNumber = Math.floor(Math.random() * 9 + 1);
+        var result = (firstNumber * secondNumber);
+        var userAnswer = parseInt(prompt('What is ' + firstNumber + ' * ' + secondNumber));
+
+        if (userAnswer === result){
+            alert('You are correct!');
+        } else {
+            alert('You are wrong');
+        }
+    </script>
+</body>
+</html>

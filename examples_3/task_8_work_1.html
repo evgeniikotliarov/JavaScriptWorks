@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_8</title>
+</head>
+<body>
+    <script>
+        var firstCoordinate = parseInt(prompt('Enter first coordinate'));
+        var secondCoordinate =parseInt(prompt('Enter second coordinate'));
+
+        var coordinates = {
+            borderX: 12,
+            borderY: 6,
+            xCoordinate: firstCoordinate,
+            yCoordinate: secondCoordinate
+        };
+        var bX = coordinates['borderX'];
+        var bY = coordinates['borderY'];
+        var hX = coordinates['xCoordinate'];
+        var hY = coordinates['yCoordinate'];
+
+        if (hX === bY || hY ===bX){
+            alert('Border');
+        } else if (hX < bX && hY < bY){
+            alert('SW');
+        } else  if (hX < bX && hY > bY){
+            alert('NW');
+        } else if (hX > bX && hY < bY){
+            alert('SE');
+        } else if (hX > bX && hY > bY){
+            alert('NE')
+        }
+    </script>
+</body>
+</html>
