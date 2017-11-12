@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_6</title>
+</head>
+<body>
+    <script>
+        var remainingWorkTimeInSeconds = parseInt(prompt('Введите число в секундах'));
+        var remainingWorkTimeInHour = Math.floor(remainingWorkTimeInSeconds / 60 / 60);
+
+        if (remainingWorkTimeInSeconds < 1 || remainingWorkTimeInSeconds > 28800){
+            alert('Мы не работаем более 8 часов!');
+        }else if (remainingWorkTimeInHour === 1) {
+            alert(remainingWorkTimeInSeconds + '\n' + 'Остался ' + remainingWorkTimeInHour + ' час');
+        }else if (remainingWorkTimeInHour >= 1 && remainingWorkTimeInHour <= 4){
+            alert(remainingWorkTimeInSeconds + '\n' + 'Осталось ' + remainingWorkTimeInHour + ' часа');
+        }else if (remainingWorkTimeInHour >= 5 && remainingWorkTimeInHour <= 8){
+            alert(remainingWorkTimeInSeconds + '\n' + 'Осталось ' + remainingWorkTimeInHour + ' часов');
+        }else {
+            alert(remainingWorkTimeInSeconds + '\n' + 'Осталось менее часа');
+        }
+    </script>
+</body>
+</html>
