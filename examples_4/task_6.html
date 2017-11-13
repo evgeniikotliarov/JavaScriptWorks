@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_6</title>
+</head>
+<body>
+<script>
+
+    var arrayNumbers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+    for (var i = 0; i < 100000; i++ ){
+        var generateNumber = Math.floor(Math.random() * 99);
+        var numberForGroupArray = Math.floor(generateNumber / 10);
+
+        arrayNumbers[numberForGroupArray] ++;
+    }
+    var result = ('Number of samples:' + i + '\n' + 'Group 0-9:   ' + arrayNumbers[0] + '\n' +
+        'Group 10-19: ' + arrayNumbers[1] + '\n' + 'Group 20-29: ' + arrayNumbers[2] + '\n'+
+        'Group 30-39: ' + arrayNumbers[3] + '\n' + 'Group 40-49: ' + arrayNumbers[4] + '\n' +
+        'Group 50-59: ' + arrayNumbers[5] + '\n' + 'Group 60-69: ' + arrayNumbers[6] + '\n' +
+        'Group 70-79: ' + arrayNumbers[7] + '\n' + 'Group 80-89: ' + arrayNumbers[8] + '\n'+
+        'Group 90-99: ' + arrayNumbers[9]);
+    alert(result)
+
+</script>
+</body>
+</html>
