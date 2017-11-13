@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_4</title>
+</head>
+<body>
+<script>
+    var correctAnswers = 0;
+    var wrongAnswers = 0;
+    var counter = 0;
+
+    while (true) {
+        var a = Math.floor(Math.random() * 9 + 1);
+        var b = Math.floor(Math.random() * 9 + 1);
+        var c = a * b;
+        var answer = prompt('What is ' + a + ' * ' + b + '?');
+
+        if (answer === null) {
+            break;
+        }
+        answer = parseInt(answer);
+
+        if (answer === c) {
+            ++correctAnswers;
+        } else {
+            ++wrongAnswers;
+        }
+        ++counter;
+        continue;
+    }
+
+    var result = 'Correct Answers: ' + correctAnswers + '\nWrong Answers: ' + wrongAnswers + '\nTests given: ' + counter;
+
+    alert(result);
+</script>
+</body>
+</html>
