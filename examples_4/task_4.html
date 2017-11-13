@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_4</title>
+</head>
+<body>
+<script>
+    var counter = 0;
+    var sum = 0;
+    while (true) {
+        var userValue = prompt('Enter some number: ');
+        if (userValue === null){
+            break;
+        }
+        userValue = parseInt(userValue);
+
+        if (userValue < 1 || userValue > 100){
+            alert('You entered wrong number');
+            continue;
+        }
+        sum += userValue;
+        counter++;
+
+        var result = parseInt(sum / counter);
+    }
+
+    alert('Numbers entered: ' + counter + '\nAverage: ' + result);
+</script>
+</body>
+</html>
