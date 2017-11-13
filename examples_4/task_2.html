@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_2</title>
+</head>
+<body>
+<script>
+    var string = prompt('Enter some words: ');
+    var starLine = '';
+
+    for (var i = 0; i < string.length + 4; i++){
+        starLine += '*';
+    }
+
+    var result = starLine + '\n' + '* ' + string + ' *' + '\n' + starLine;
+    console.log(result);
+</script>
+</body>
+</html>
