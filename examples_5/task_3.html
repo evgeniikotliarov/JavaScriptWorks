@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_3</title>
+</head>
+<body>
+    <script>
+        var askForNumber = function (message, min, max) {
+            var number;
+            do {
+                number = parseInt(prompt(message));
+            } while (!number || number < min || number > max);
+
+            return number;
+        };
+
+        var grade = askForNumber('Enter your grade', 1, 100);
+
+        console.log('Your grade = ', grade);
+
+    </script>
+</body>
+</html>
