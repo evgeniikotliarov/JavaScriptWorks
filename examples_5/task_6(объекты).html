@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var john = {
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 30
+        };
+
+        var Car = {
+        color: 'red',
+        model: 'Ford',
+        price: 5000,
+        getFullName: function () {
+        return this.model + ' $' + this.price;
+        }
+        };
+
+        console.log(Car.color);
+        console.log(Car.getFullName);
+
+    </script>
+</body>
+</html>
