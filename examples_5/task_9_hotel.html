@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_9</title>
+</head>
+<body>
+    <script>
+        var Hotel = {
+        rooms: 10,
+        bookRoom: function () {
+        if (this.rooms > 0) {
+            this.rooms--;
+            console.log('Rooms was booked');
+        } else {
+            console.log('All rooms are booked!')
+                }
+            }
+        };
+
+        Hotel.bookRoom();
+        console.log(Hotel.rooms)
+    </script>
+</body>
+</html>
