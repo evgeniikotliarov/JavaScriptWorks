@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_8</title>
+</head>
+<body>
+    <script>
+        var Dice = {
+        randomInt: function (min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+        },
+        d20: function () {
+        return this.randomInt(1, 20)
+        }
+        };
+
+        random = function () {
+        return 0.33
+        };
+        console.log(random());
+        console.log(random());
+
+    </script>
+</body>
+</html>
