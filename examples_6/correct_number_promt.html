@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promt</title>
+</head>
+<body>
+    <script>
+        var number = prompt('Enter number:');
+        
+        function correctNumber(number) {
+            if (parseInt(number) > 0){
+                alert('You enter positive number');
+            } else if (number === 0) {
+                alert('You entered zero');
+            } else if (number < 0) {
+                alert('You entered negative number');
+            } else if (isNaN(number)){
+                alert('You entered not a number');
+            } else if (number === null){
+                alert('You pressed Cancel');
+            }
+        }
+        correctNumber(number);
+    </script>
+</body>
+</html>
