@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var searchSymbol = prompt('Enter search symbol');
+        var stringForSearch = prompt('Enter string for search');
+        var arrayString;
+
+
+        function result(searchSymbol, arrayString) {
+            var countChars = 0;
+            arrayString = stringForSearch.split('');
+
+            for (var i = 0; i < arrayString.length; i++ ){
+                if(arrayString[i] === searchSymbol){
+                    countChars++;
+                }
+            }
+            alert('Matches found: ' + countChars);
+        }
+        result(searchSymbol, stringForSearch);
+    </script>
+</body>
+</html>
