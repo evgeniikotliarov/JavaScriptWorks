@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_1</title>
+</head>
+<body>
+    <script>
+        var temperatureInCelsius = prompt('Enter temperature');
+        var temperature;
+
+        if (isNaN(temperatureInCelsius)) {
+            alert('This is not a temperature');
+        } else if (temperatureInCelsius) {
+            temperature = converter(parseInt(temperatureInCelsius));
+            alert("Fahrenheit temperature: " + temperature )
+        }
+
+        function converter(temperatureInCelsius) {
+            var fahrenheitTemperature;
+            fahrenheitTemperature = ((temperatureInCelsius * 9 / 5) + 32 );
+
+            return fahrenheitTemperature
+        }
+    </script>
+</body>
+</html>
