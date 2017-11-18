@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        var number = parseInt(prompt('Enter number'));
+        var reproduceNumber = parseInt(prompt('Enter reproduce number') - 1);
+        if (isNaN(reproduceNumber)){
+            reproduceNumber = 2;
+        }
+        
+        function power(arg_1, arg_2) {
+            var result = arg_1;
+            for(var i = 0; i < arg_2; i++){
+                result *= arg_1;
+            }
+            return result;
+        }
+
+        alert(power(number, reproduceNumber));
+    </script>
+</body>
+</html>
