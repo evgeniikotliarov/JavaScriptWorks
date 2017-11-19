@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        var Person = {
+            firstName: 'John',
+            lastName: 'Doe',
+            series: [],
+            getFullName: function () {
+                return this.firstName + ' ' + this.lastName;
+            },
+            addSeries: function (seriesName) {
+                this.series.push(seriesName)
+            },
+            getFavourite: function () {
+                var message = 'Hello person this is ';
+                for (var i = 0; i < this.series.length; i++){
+                    if (i < this.series.length - 1){
+                        message += ', ';
+                    } else {
+                        message += '. ';
+                    }
+                }
+                return message;
+            }
+        };
+
+        Person.addSeries('House md');
+        Person.addSeries('How much');
+        Person.addSeries('Big theory');
+
+        console.log(Person.getFullName());
+        console.log(Person.getFavourite());
+    </script>
+</body>
+</html>
