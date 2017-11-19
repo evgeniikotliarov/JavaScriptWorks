@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>key_value</title>
+</head>
+<body>
+    <script>
+        var PiggyBank = {
+        coins: {1: 0, 3: 0, 5: 0, 10: 0, 20: 0},
+        addCoin: function(value) {
+            switch (value){
+            case  1: case  3: case  5: case  10:
+            this.coins[value]++;
+            break;
+            default:
+            console.log('Wrong monet');
+            }
+        },
+
+        getCoinsMessage: function () {
+        var message = '';
+            for(var key in this.coins) {
+                message += key + ': ' + this.coins[key] + '\n';
+            }
+        return message;
+        },
+
+        getTotal: function () {
+        var sum = 0;
+
+        for (var key in this.coins) {
+            sum += this.coins[key] * key;
+        }
+        return sum;
+        }
+        };
+
+        PiggyBank.addCoin(1);
+        PiggyBank.addCoin(3);
+        PiggyBank.addCoin(5);
+        PiggyBank.addCoin(10);
+
+        console.log(PiggyBank.getCoinsMessage());
+        console.log(PiggyBank.getTotal());
+    </script>
+</body>
+</html>
