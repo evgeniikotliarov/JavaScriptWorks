@@ -23,8 +23,6 @@ coffeeMachine.waterAmount = 200;
 var powerfulCoffeeMachine = new CoffeeMachine(1000);
 powerfulCoffeeMachine.waterAmount = 300;
 
-
-
 function CoffeeMachine2(power) {
     this.waterAmount = 0;
     Machine.call(this);
