@@ -32,4 +32,17 @@ $(function() {
             },1000);
         }
     });
+
+    pause.on('click', function() {
+        clearInterval(interval);
+        interval = undefined;
+    });
+
+    reset.on('click', function () {
+        clearInterval(interval);
+        secondsCounter = 0;
+        minutesCounter = 0;
+        seconds.text('0' + secondsCounter);
+        minutes.text('0' + minutesCounter);
+    });
 });
