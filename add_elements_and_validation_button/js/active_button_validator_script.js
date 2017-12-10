@@ -17,4 +17,9 @@ $(function () {
             $('input[type="submit"]').attr('disabled', false);
         }
     });
+
+    $('input[type="submit"]').on('click', function (event) {
+        event.preventDefault();
+        alert('User name: ' + userNameText + '\n' + 'Password: ' + passwordText);
+    })
 });
