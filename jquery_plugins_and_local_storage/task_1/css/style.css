@@ -10,3 +10,17 @@
 .item img{
     margin: 0 auto;
 }
+.glyphicon {
+    font-weight: 100;
+}
+h4{
+    display: inline-block;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.bold_text{
+    font-weight: bold;
+}
+.thumbnail{
+    border: none;
+}
