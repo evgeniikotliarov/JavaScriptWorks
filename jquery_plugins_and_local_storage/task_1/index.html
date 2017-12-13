@@ -13,8 +13,11 @@
 	<link rel="stylesheet" href="../jquery-ui-1.12.1.custom/jquery-ui.theme.css">
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/select_images.js"></script>
+	<script src="js/select_date.js"></script>
 	<script src="js/seasons-menu.js"></script>
-    <script src="js/checkbox_rating.js"></script>
+	<script src="js/create_account.js"></script>
+	<script src="js/checkbox_rating.js"></script>
+	<script src="js/video_player.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -34,7 +37,7 @@
 			<li><a href="#">Services</a></li>
 			<li><a href="#">Contact</a></li>
 			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Seasons<span class="caret"></span></a>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seasons<span class="caret"></span></a>
 				<ul id="menu">
 					<li class="ui-widget-header"><a href="#">Season 1</a></li>
 					<li><a href="#">Film 1</a></li>
@@ -60,7 +63,6 @@
 </nav>
 <div id="dialog-form" title="Create new Account">
 	<p class="validateTips">All form fields are required.</p>
-
 	<form>
 		<fieldset>
 			<label for="name">Name</label>
@@ -73,6 +75,7 @@
 		</fieldset>
 	</form>
 </div>
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	<ol class="carousel-indicators">
 		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -102,6 +105,7 @@
 		<span class="sr-only">Next</span>
 	</a>
 </div>
+
 <div class="container">
 	<h1>Welcome to Game of Thrones</h1>
 	<hr>
@@ -152,87 +156,90 @@
 			<input type="submit" class="btn-success" value="Submit">
 		</fieldset>
 	</div>
-    <hr>
-
+	<hr>
 </div>
+
 <div class="container">
-    <h2>Select Poster</h2>
-    <h3>We will produce a large poster</h3>
-    <hr>
+	<h2>Select Poster</h2>
+	<h3>We will produce a large poster</h3>
+	<hr>
 </div>
+
 <div class="container">
-    <div class="row">
-        <div class="ui-widget ui-helper-clearfix">
+	<div class="row">
+		<div class="ui-widget ui-helper-clearfix">
 
-            <ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
-                <li class="ui-widget-content ui-corner-tr">
-                    <h5 class="ui-widget-header">Image 1</h5>
-                    <img src="img/photo-1.jpg" alt="The peaks of High Tatras">
-                    <a href="img/photo-1.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
-                    <a href="link/to/print/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-print">Select image</a>
-                </li>
-                <li class="ui-widget-content ui-corner-tr">
-                    <h5 class="ui-widget-header">Image 2</h5>
-                    <img src="img/photo-2.jpg" alt="The chalet at the Green mountain lake">
-                    <a href="img/photo-2.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
-                    <a href="link/to/print/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-print">Select image</a>
-                </li>
-                <li class="ui-widget-content ui-corner-tr">
-                    <h5 class="ui-widget-header">Image 3</h5>
-                    <img src="img/photo-3.jpg" alt="Planning the ascent">
-                    <a href="img/photo-3.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
-                    <a href="link/to/print/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-print">Select image</a>
-                </li>
-                <li class="ui-widget-content ui-corner-tr">
-                    <h5 class="ui-widget-header">Image 4</h5>
-                    <img src="img/photo-4.jpg" alt="On top of Kozi kopka">
-                    <a href="img/photo-4.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
-                    <a href="link/to/print/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-print">Select image</a>
-                </li>
-                <li class="ui-widget-content ui-corner-tr">
-                    <h5 class="ui-widget-header">Image 5</h5>
-                    <img src="img/photo-5.jpg" alt="On top of Kozi kopka">
-                    <a href="img/photo-5.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
-                    <a href="link/to/print/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-print">Select image</a>
-                </li>
-                <li class="ui-widget-content ui-corner-tr">
-                    <h5 class="ui-widget-header">Image 6</h5>
-                    <img src="img/photo-6.jpg" alt="On top of Kozi kopka">
-                    <a href="img/photo-6.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
-                    <a href="link/to/print/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-print">Select image</a>
-                </li>
-            </ul>
+			<ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+				<li class="ui-widget-content ui-corner-tr">
+					<h5 class="ui-widget-header">Image 1</h5>
+					<img src="img/photo-1.jpg" alt="The peaks of High Tatras">
+					<a href="img/photo-1.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+					<a href="link/to/print/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-print">Select image</a>
+				</li>
+				<li class="ui-widget-content ui-corner-tr">
+					<h5 class="ui-widget-header">Image 2</h5>
+					<img src="img/photo-2.jpg" alt="The chalet at the Green mountain lake">
+					<a href="img/photo-2.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+					<a href="link/to/print/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-print">Select image</a>
+				</li>
+				<li class="ui-widget-content ui-corner-tr">
+					<h5 class="ui-widget-header">Image 3</h5>
+					<img src="img/photo-3.jpg" alt="Planning the ascent">
+					<a href="img/photo-3.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+					<a href="link/to/print/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-print">Select image</a>
+				</li>
+				<li class="ui-widget-content ui-corner-tr">
+					<h5 class="ui-widget-header">Image 4</h5>
+					<img src="img/photo-4.jpg" alt="On top of Kozi kopka">
+					<a href="img/photo-4.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+					<a href="link/to/print/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-print">Select image</a>
+				</li>
+				<li class="ui-widget-content ui-corner-tr">
+					<h5 class="ui-widget-header">Image 5</h5>
+					<img src="img/photo-5.jpg" alt="On top of Kozi kopka">
+					<a href="img/photo-5.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+					<a href="link/to/print/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-print">Select image</a>
+				</li>
+				<li class="ui-widget-content ui-corner-tr">
+					<h5 class="ui-widget-header">Image 6</h5>
+					<img src="img/photo-6.jpg" alt="On top of Kozi kopka">
+					<a href="img/photo-6.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+					<a href="link/to/print/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-print">Select image</a>
+				</li>
+			</ul>
 
-            <div id="trash" class="ui-widget-content ui-state-default">
-                <h4 class="ui-widget-header"><span class="ui-icon ui-icon-print">Print</span> Selectable images</h4>
-            </div>
+			<div id="trash" class="ui-widget-content ui-state-default">
+				<h4 class="ui-widget-header"><span class="ui-icon ui-icon-print">Print</span> Selectable images</h4>
+			</div>
 
-        </div>
-    </div>
+		</div>
+	</div>
 
-    <div class="container">
-        <h5> Select the date of delivery: <input type="text" id="datepicker"></h5>
-        <hr>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-md-6">
-                <p>The Last season,  series was renewed for a seventh season in April 2016,[10] which premiered on July 16,
-                    2017 and consisted of seven episodes. The series will conclude with its eighth season, which will consist of six episodes. As of August 27, 2017, 67 episodes of Game of Thrones have aired, concluding the seventh season. The show's episodes have won numerous awards including two Primetime Emmy Award for Outstanding Drama Series</p>
-            </div>
-
-            <div class="col-sm-6 col-md-6">
-                <div class="player">Click full screen</div>
-                <div class="tools">
+	<div class="container">
+		<h5> Select the date of delivery: <input type="text" id="datepicker"></h5>
+		<hr>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6">
+				<p>The Last season,  series was renewed for a seventh season in April 2016,[10] which premiered on July 16,
+					2017 and consisted of seven episodes. The series will conclude with its eighth season, which will consist of six episodes. As of August 27, 2017, 67 episodes of Game of Thrones have aired, concluding the seventh season. The show's episodes have won numerous awards including two Primetime Emmy Award for Outstanding Drama Series</p>
+			</div>
+			<div class="col-sm-6 col-md-6">
+				<div class="player">Click full screen</div>
+				<div class="tools">
 				    <span class="set">
 						<button title="Full screen">Full screen</button>
 				  	</span>
-                </div>
-            </div>
-        </div>
-    </div>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<div class="container">
+		<hr>
+		<p class="footer-down">Copyright © Your Website 2017</p>
+	</div>
 </div>
-
 </body>
 </html>
