@@ -19,6 +19,16 @@
 .dropdown:hover #menu {
     display: inline-block;
 }
+.player {
+    width: 500px;
+    height: 300px;
+    border: 2px groove gray;
+    background: url("../img/poster2.jpg") 100% 100% no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    line-height: 300px;
+}
 .item img{
     margin: 0 auto;
 }
