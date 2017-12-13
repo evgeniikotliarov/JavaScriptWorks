@@ -3,6 +3,18 @@
     margin: 0;
     padding: 0;
 }
+#gallery { float: left; width: 65%; min-height: 12em; }
+.gallery.custom-state-active { background: #eee; }
+.gallery li { float: left; width: 196px; padding: 0.4em; margin: 0 0.4em 0.4em 0; text-align: center; }
+.gallery li h5 { margin: 0 0 0.4em; cursor: move; }
+.gallery li a { float: right; }
+.gallery li a.ui-icon-zoomin { float: left; }
+.gallery li img { width: 80%; height: 100%; cursor: move; }
+
+#trash { float: right; width: 32%; min-height: 18em; padding: 1%; }
+#trash h4 { line-height: 16px; margin: 0 0 0.4em; }
+#trash h4 .ui-icon { float: left; }
+#trash .gallery h5 { display: none; }
 #menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;font-size:14px;text-align:left;list-style:none;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid #ccc;}
 .dropdown:hover #menu {
     display: inline-block;
