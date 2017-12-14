@@ -10,7 +10,17 @@
     <script src="../jquery-ui-1.12.1.custom/jquery-ui.js/"></script>
     <link rel="stylesheet" href="../jquery-ui-1.12.1.custom/jquery-ui.css">
     <link rel="stylesheet" href="../jquery-ui-1.12.1.custom/jquery-ui.theme.css">
+    <script>
+        $(function () {
+            var userComment = $('#comment');
+            var oldComment = localStorage.getItem('comment');
+            userComment.val(oldComment);
 
+            $('#save').on('click', function() {
+                localStorage.setItem('comment', userComment.val());
+            });
+        });
+    </script>
 </head>
 <body>
 <form>
