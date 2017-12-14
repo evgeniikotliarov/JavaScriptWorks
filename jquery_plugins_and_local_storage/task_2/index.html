@@ -19,6 +19,10 @@
             $('#save').on('click', function() {
                 localStorage.setItem('comment', userComment.val());
             });
+
+            $('#clear').on('click', function () {
+                localStorage.clear(userComment);
+            });
         });
     </script>
 </head>
