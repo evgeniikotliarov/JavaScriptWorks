@@ -1,0 +1,16 @@
+
+#dialog {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+#button-ok {
+    color: blue;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
