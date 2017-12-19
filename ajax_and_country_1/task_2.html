@@ -27,6 +27,15 @@
                 success: addData
             });
         }
+        $.ajax({
+            method: 'GET',
+            url: "https://restcountries.eu/rest/v2/all?fields=name;alpha2Code;capital;population,flag",
+            success: function (response) {
+                for (var i = 0; i < response.length; i++){
+                    getFullInformation(response[i].name);
+                }
+            }
+        });
     </script>
 </body>
 </html>
