@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="tab_style.css">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+    <title>custom_tab</title>
+</head>
+<body>
+<div class="container">
+    <ul class="tabs">
+        <li class="tab-link active"><a data-tab-to-open="1">tab 1</a></li>
+        <li class="tab-link"><a data-tab-to-open="2">tab 2</a></li>
+        <li class="tab-link"><a data-tab-to-open="3">tab 3</a></li>
+        <li class="tab-link"><a data-tab-to-open="4">tab 4</a></li>
+    </ul>
+
+    <div class="tabs-content">
+        <div class="tab-content active" data-tab-id="1"><h1>Here goes tab#1</h1></div>
+        <div class="tab-content" data-tab-id="2"><h1>Here goes tab#2</h1></div>
+        <div class="tab-content" data-tab-id="3"><h1>Here goes tab#3</h1></div>
+        <div class="tab-content" data-tab-id="4"><h1>Here goes tab#4</h1></div>
+    </div>
+</div>
+
+<script src="custom_tab_script.js"></script>
+</body>
+</html>
