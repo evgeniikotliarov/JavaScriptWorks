@@ -1,4 +1,18 @@
 
+function renderVal(val) {
+  switch (getType(val)) {
+    case 'Array':
+      return renderArray(val);
+    case 'Object':
+      return renderObject(val);
+    default:
+      return val;
+  }
+}
+
+let newOrder = [
+  'name', 'flag', 'capital'
+];
 
 let maps = [];
 
@@ -26,3 +40,21 @@ let translate = {
   regionalBlocs: 'Региональные группы'
 };
 
+function getInformation(name) {
+  if (!`${name}`.length) {
+    return;
+  }
+  $.ajax({
+    method: 'GET',
+    url: "https://restcountries.eu/rest/v2/name/" + name,
+    success: renderCountrys,
+    error: function (status) {
+      alert('error ' + status.responseJSON.status)
+    }
+  });
+}
+
+
+$('#show').on('click', function () {
+  getInformation($('#country-name').val());
+});
