@@ -31,6 +31,13 @@ function getInformation(name) {
     });
 
 }
+$(document).ajaxStart(function() {
+    $('#preloader').show();
+});
+
+$(document).ajaxStop(function() {
+    $('#preloader').hide();
+});
 
 $('#show').on('click', function () {
     getInformation($('#country-name').val());
