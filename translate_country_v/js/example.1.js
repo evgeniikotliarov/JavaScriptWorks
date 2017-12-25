@@ -1,3 +1,31 @@
+function getType(variable) {
+  let type = toString.call(variable).slice(8, -1); // [object Array] => Array
+  return type === 'Number' && isNaN(variable) ? 'NaN' : type;
+}
+
+let renderKey = {
+  flag: (url) => {
+    return '<div class="value flag">' +
+      `<img src="${url}"/>` +
+    '</div>';
+  }
+};
+
+function renderArray(arrayData) {
+  return arrayData
+    .map((val) => {
+      return renderVal(val);
+    })
+    .join(', ');
+}
+
+function renderObject(objectData) {
+  return Object.keys(objectData)
+    .map((key) => {
+      return renderVal(objectData[key]);
+    })
+    .join(', ');
+}
 
 function renderVal(val) {
   switch (getType(val)) {
@@ -54,7 +82,7 @@ function getInformation(name) {
   });
 }
 
-
 $('#show').on('click', function () {
   getInformation($('#country-name').val());
 });
+
