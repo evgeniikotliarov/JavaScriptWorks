@@ -1,4 +1,8 @@
 
+block {
+    position: relative;
+}
+
 #preloader {
     display: none;
     position: absolute;
