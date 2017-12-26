@@ -140,3 +140,14 @@ function getMapDataForRender(counry) {
 function mapBox(name) {
   return `<div class="map-box" id="${name}"></div>`;
 }
+
+function mapInit() {
+  maps.map((val)=>{
+    zoom = Math.round(30 / (`${val.area}`.length || 1));
+    new ymaps.Map(val.name, {
+      center: val.latlng,
+      zoom: zoom
+    });
+  });
+  maps = [];
+}

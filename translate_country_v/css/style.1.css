@@ -10,6 +10,13 @@ block {
     top: 50%;
 }
 
+.gllpLatlonPicker {
+    display: none;
+}
+.gllpLatlonPicker {
+    width: 400px;
+}
+
 .country{
     width: 700px;
     border: 1px solid darkgreen;
