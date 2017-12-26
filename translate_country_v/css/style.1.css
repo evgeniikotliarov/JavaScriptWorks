@@ -9,3 +9,50 @@ block {
     left: 50%;
     top: 50%;
 }
+
+.country{
+    width: 700px;
+    border: 1px solid darkgreen;
+    margin: 0 0 15px 0;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: wrap;
+    align-content: flex-start;
+}
+
+.line{
+    margin: 0 5px 5px 0;
+    padding: 5px 0;
+    background-color: gray;
+    vertical-align: top;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.5s;
+    position: relative;
+}
+.country:hover .line{
+    opacity: 0.1;
+}
+
+.name{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 5px;
+}
+.value{
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 5px;
+}
+
+.flag img{
+    height: 34px;
+}
+
+.map-box{
+    width: 700px;
+    min-height: 500px;
+    position: absolute;
+}
