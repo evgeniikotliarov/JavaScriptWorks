@@ -82,7 +82,61 @@ function getInformation(name) {
   });
 }
 
+function renderFirstKey(counry) {
+  return newOrder.map((key) => {
+    return renderLine(key, counry[key])
+  }).join(' ');
+}
+
+function renderOtherKey(counry) {
+  return Object.keys(counry)
+    .filter((key) => {
+      return newOrder.indexOf(key) < 0
+    })
+    .map((key) => {
+      return renderLine(key, counry[key])
+    })
+    .join(' ')
+}
+
+function renderCountrys(response) {
+  if (!response.length) {
+    return;
+  }
+  let str = response.map(renderCountry).join('');
+  $('#countryBlock').html(str);
+  mapInit();
+}
+
+
+
+function renderCountry(counry) {
+  let str = renderFirstKey(counry) + renderOtherKey(counry);
+  let mapDataRender = getMapDataForRender(counry);
+  maps.push(mapDataRender);
+  return '<div class="country">' +
+    mapBox(mapDataRender.name) +
+    str +
+  '</div>'
+}
+
+function renderLine(key, val) {
+  return '<div class="line">' +
+    `<div class="name">${translate[key] ? translate[key] : key}</div>` +
+    '<div class="value">' +
+      (renderKey[key] ? renderKey[key](val) : renderVal(val)) +
+    '</div>' +
+  '</div>';
+}
+
 $('#show').on('click', function () {
   getInformation($('#country-name').val());
 });
 
+function getMapDataForRender(counry) {
+  return {name: counry.name || 'map', latlng: counry.latlng || [0,0], area: counry.area};
+}
+
+function mapBox(name) {
+  return `<div class="map-box" id="${name}"></div>`;
+}
