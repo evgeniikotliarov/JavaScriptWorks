@@ -13,15 +13,15 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="js/myFunction.js"></script>
-    <script>
-        $(document).ajaxStart(function() {
-        $('#preloader').show();
-        });
 
-        $(document).ajaxStop(function() {
-        $('#preloader').hide();
-        });
-    </script>
+<div id="preloader"></div>
+
+<div class="enter-country">
+    <label for="country-name">Enter country:</label>
+    <input id="country-name" type="text">
+    <button id="show">Show information</button>
+</div>
+<div id="information"></div>
+    <script src="js/myFunction.js"></script>
 </body>
 </html>
