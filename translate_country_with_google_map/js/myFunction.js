@@ -13,7 +13,6 @@ function getInformation(name) {
         url: "https://restcountries.eu/rest/v2/name/" + name,
         success: printCountry
     });
-
 }
 
 $('#show').on('click', function () {
