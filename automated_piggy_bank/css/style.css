@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+.total-sum {
+    text-align: center;
+    padding: 20px;
+    background: lightgreen;
+}
+.coin {
+    padding:10px;
+}
+.buttonsBlock {
+    text-align: center;
+    padding: 20px;
+    background: lightcyan;
+
+}
