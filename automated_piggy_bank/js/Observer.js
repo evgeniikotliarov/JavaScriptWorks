@@ -35,8 +35,8 @@ $(function () {
     const observer = new Observer();
 
     let coinsChange = function () {
-        piggybank.showCoins('.totalSumCoins');
-        piggybank.getTotal('.total-sum');
+        piggybank.showCoins('.total-sum');
+        piggybank.getTotal('.total-sum-number');
     };
 
     observer.on('coinAdded', coinAdded);

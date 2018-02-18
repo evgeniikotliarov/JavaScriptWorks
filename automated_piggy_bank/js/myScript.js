@@ -18,9 +18,9 @@ PiggyBank.prototype.addCoin = function(value) {
 };
 
 PiggyBank.prototype.showCoins = function(coinNumber) {
-    $('.total-sum-number').empty();
-    let titleElement = $('<h2>Total: <span class="total-sum"></span></h2>');
-    $('.total-sum-number').append(titleElement);
+    $('.total-sum').empty();
+    let titleElement = $('<h2>Total: <span class="total-sum-number"></span></h2>');
+    $('.total-sum').append(titleElement);
     for (let value in this.coins) {
         $(coinNumber).append(value + ':' + (this.coins[value]) + '<br>');
     }
