@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+    props;
   render() {
     return (
       <main>
         <header>
-          <h1>React todo</h1>
+          <h1>{this.props.title}</h1>
         </header>
         <section className="todo-list">
             <div className="todo completed">
