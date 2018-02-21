@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Checkbox from "./Checkbox";
 import Button from "./Button";
+import './Styles.css';
 
 function Todo(props) {
     return (

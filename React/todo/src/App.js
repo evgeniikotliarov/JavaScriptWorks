@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './App.css';
 import Header from './components/Header';
 import Todo from "./components/Todo";
@@ -10,13 +11,24 @@ class App extends Component {
     return (
       <main>
           <Header title={this.props.title}/>
-        <section className="todo">
-            <Todo title={"Learn Es6"} completed={true}/>
-            <Todo title={"Learn React*"} completed={false}/>
+        <section className="todo-list">
+            {this.props.todos.map(todo => <Todo key={todo.id} title={todo.title} completed={todo.completed}/>)}
         </section>
       </main>
     );
   }
 }
+
+App.propTypes = {
+    title: PropTypes.string,
+    todos: PropTypes.arrayOf(PropTypes.shape(
+        {title: PropTypes.string.isRequired,
+        completed: PropTypes.bool.isRequired,
+        id: PropTypes.number.isRequired}
+    )).isRequired
+};
+App.defaultProps = {
+    title: 'React TODO',
+};
 
 export default App;
