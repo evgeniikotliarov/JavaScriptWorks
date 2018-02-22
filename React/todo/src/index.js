@@ -7,5 +7,5 @@ import todos from "./todos";
 
 
 
-ReactDOM.render(<App todos={todos} />, document.getElementById('root'));
+ReactDOM.render(<App initialData={todos} />, document.getElementById('root'));
 registerServiceWorker();

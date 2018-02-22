@@ -7,7 +7,7 @@ import './Styles.css';
 function Todo(props) {
     return (
         <div className={`todo${props.completed ? " completed" : ''}`}>
-            <Checkbox initiallyChecked={props.completed} />
+            <Checkbox checked={props.completed} onChange={props.onStatusChange} />
             <span className="todo-title">{props.title}</span>
             <Button className="delete icon" icon="delete"/>
         </div>
@@ -15,7 +15,8 @@ function Todo(props) {
 }
 Todo.propTypes = {
     title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired
+    completed: PropTypes.bool.isRequired,
+    onStatusChange: PropTypes.func.isRequired
 };
 
 export default Todo;
