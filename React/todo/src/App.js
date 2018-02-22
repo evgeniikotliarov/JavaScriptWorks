@@ -17,7 +17,13 @@ class App extends Component {
     }
 
     handleStatusChange(id) {
-        console.log('onStatusChange');
+        let todos = this.state.todos.map(todo => {
+            if (todo.id === id){
+                todo.completed = !todo.completed;
+            }
+            return todo;
+        });
+        this.setState({todos: todos});
     }
 
     render() {
