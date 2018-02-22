@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Todo from "./components/Todo";
 import './components/Styles.css'
+import todos from "./todos";
 
 class App extends Component {
     constructor(props) {
@@ -13,7 +14,8 @@ class App extends Component {
             todos: this.props.initialData
         };
 
-        this.handleStatusChange = this.handleStatusChange.bind(this)
+        this.handleStatusChange = this.handleStatusChange.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     handleStatusChange(id) {
@@ -26,6 +28,12 @@ class App extends Component {
         this.setState({todos: todos});
     }
 
+    handleDelete(id){
+        let todos = this.state.todos.filter(todo => todo.id !== id);
+
+        this.setState({todos: todos});
+    }
+
     render() {
         return (
             <main>
@@ -35,7 +43,8 @@ class App extends Component {
                                                         title={todo.title}
                                                         id={todo.id}
                                                         completed={todo.completed}
-                                                        onStatusChange={this.handleStatusChange}/>)}
+                                                        onStatusChange={this.handleStatusChange}
+                                                        onDelete={this.handleDelete}/>)}
                 </section>
             </main>
         );
