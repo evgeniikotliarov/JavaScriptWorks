@@ -7,12 +7,12 @@ const todos = [
     {
         id:2,
         title: 'Изучить React',
-        completed: true
+        completed: false
     },
     {
         id:3,
         title: 'Create App',
-        completed: true
+        completed: false
     }
 ];
 

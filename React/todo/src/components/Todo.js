@@ -7,7 +7,7 @@ import './Styles.css';
 function Todo(props) {
     return (
         <div className={`todo${props.completed ? " completed" : ''}`}>
-            <Checkbox checked={props.completed}/>
+            <Checkbox initiallyChecked={props.completed} />
             <span className="todo-title">{props.title}</span>
             <Button className="delete icon" icon="delete"/>
         </div>
