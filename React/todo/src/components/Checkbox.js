@@ -10,7 +10,7 @@ function Checkbox(props) {
     )
 }
 
-Checkbox.PropTypes = {
+Checkbox.propTypes = {
     checked: PropTypes.bool.isRequired,
     onChange: PropTypes.func.isRequired
 };

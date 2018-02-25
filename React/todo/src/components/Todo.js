@@ -17,6 +17,17 @@ class Todo extends Component {
 
     }
 
+    componentWillReceiveProps(nextProps){
+        console.log(nextProps);
+    }
+
+    componentWillUpdate(nextProps, nextState){
+        console.log('componentWillUpdate');
+        console.log('nextState', nextState);
+        console.log('nextProps', nextProps);
+
+    }
+
     handleSubmit(event) {
         event.preventDefault();
         let title = this.refs.title.value;
