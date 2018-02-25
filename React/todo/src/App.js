@@ -10,7 +10,6 @@ import todos from "./todos";
 class App extends Component {
     constructor(props) {
         super(props);
-        console.log("constructor");
         this.state = {
             todos: this.props.initialData
         };
@@ -20,15 +19,7 @@ class App extends Component {
         this.handleAdd = this.handleAdd.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
     }
-
-    componentWillMount() {
-        console.log("willMount");
-    }
-
-    componentDidMount() {
-        console.log('componentDidMount');
-    }
-
+    
     nextId() {
         this._nextId = this._nextId || 4;
         return this._nextId++;
@@ -74,7 +65,6 @@ class App extends Component {
     }
 
     render() {
-        console.log('render');
         return (
             <main>
                 <Header title={this.props.title} todos={this.state.todos}/>
