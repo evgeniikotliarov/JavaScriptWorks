@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import './App.css';
 import Header from './components/Header';
 import Todo from "./components/Todo";
-import './components/Styles.css'
+import './components/Styles.css';
+import Form from "./components/Form";
 import todos from "./todos";
 
 class App extends Component {
@@ -46,6 +47,7 @@ class App extends Component {
                                                         onStatusChange={this.handleStatusChange}
                                                         onDelete={this.handleDelete}/>)}
                 </section>
+                <Form/>
             </main>
         );
     }
