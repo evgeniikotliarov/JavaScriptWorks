@@ -11,7 +11,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            todos: this.props.initialData
+            todos: []
         };
 
         this.handleStatusChange = this.handleStatusChange.bind(this);

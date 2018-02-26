@@ -3,11 +3,11 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
-const bodyParser = require('bodyParser');
-
-const todos = require('./src/todos');
+const bodyParser = require('body-parser');
 
 const app = express();
+
+const todos = require('./api/todos.json');
 
 let nextId = 4;
 
