@@ -19,6 +19,13 @@ class App extends Component {
         this.handleAdd = this.handleAdd.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
     }
+
+    componentDidMount() {
+        fetch('http://localhost:3000/api/todos')
+            .then(response => response.json())
+            .then(todos => setState({todos}))
+            .catch(error => console.error(error));
+    }
     
     nextId() {
         this._nextId = this._nextId || 4;

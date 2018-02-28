@@ -25,7 +25,6 @@ class Form extends Component {
 
     handleChange(event) {
         let title = event.target.value;
-
         this.setState({title});
     }
 
