@@ -11,7 +11,7 @@ const todos = require('./api/todos');
 
 let nextId = 4;
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 3030));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());

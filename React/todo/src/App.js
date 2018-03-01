@@ -24,13 +24,13 @@ class App extends Component {
     componentDidMount() {
         axios.get('/api/todos')
             .then(response => response.data)
-            .then(todos => this.setState({ todos }))
+            .then(todos => this.setState({todos}))
             .catch(this.handleError);
     }
 
     handleStatusChange(id) {
         let todos = this.state.todos.map(todo => {
-            if (todo.id === id){
+            if (todo.id === id) {
                 todo.completed = !todo.completed;
             }
             return todo;
@@ -39,7 +39,7 @@ class App extends Component {
     }
 
     handleAdd(title) {
-        axios.post('api/todos', { title })
+        axios.post('api/todos', {title})
             .then(response => response.data)
             .then(todo => {
                 let todos = [...this.state.todos, todo];
@@ -50,21 +50,43 @@ class App extends Component {
 
     }
 
-    handleDelete(id){
-        let todos = this.state.todos.filter(todo => todo.id !== id);
-
-        this.setState({todos: todos});
+    handleDelete(id) {
+        axios.delete(`api/todos/${id}`)
+            .then(() => {
+                let todos = this.state.todos.filter(todo => todo.id !== id);
+                this.setState({todos: todos});
+            })
+            .catch(this.handleError);
     }
 
-    handleEdit(id, title){
-        let todos = this.state.todos.map(todo => {
-            if (todo.id === id) {
-                todo.title = title;
-            }
+    handleToggle(id) {
+        axios.patch(`api/todos/${id}`)
+            .then(response => {
+                let todos = this.state.todos.map(todo => {
+                    if (todo.id === id) {
+                        todo = response.data;
+                    }
+                    return todo;
+                });
+                this.setState({todos})
+            })
+            .catch(this.handleError);
 
-            return todo;
-        });
-        this.setState({ todos })
+    }
+
+    handleEdit(id, title) {
+        axios.put(`api/todos/${id}`, {title})
+            .then(response => {
+                let todos = this.state.todos.map(todo => {
+                    if (todo.id === id) {
+                        todo = response.data;
+                    }
+                    return todo;
+                });
+                this.setState({todos})
+            })
+            .catch(this.handleError);
+
     }
 
     handleError(error) {
