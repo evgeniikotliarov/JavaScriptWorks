@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-const todos = require('./api/todos.json');
+const todos = require('./api/todos');
 
 let nextId = 4;
 
@@ -15,7 +15,7 @@ app.set('port', (process.env.PORT || 3000));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extends: true}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use((req, res, next) => {
     res.setHeader('Cache-Control', 'no-cache');

@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import './App.css';
 import Header from './components/Header';
 import Todo from "./components/Todo";
 import './components/Styles.css';
 import Form from "./components/Form";
-import todos from "./todos";
+
 
 class App extends Component {
     constructor(props) {
@@ -21,15 +22,10 @@ class App extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3000/api/todos')
-            .then(response => response.json())
-            .then(todos => setState({todos}))
-            .catch(error => console.error(error));
-    }
-    
-    nextId() {
-        this._nextId = this._nextId || 4;
-        return this._nextId++;
+        axios.get('/api/todos')
+            .then(response => response.data)
+            .then(todos => this.setState({ todos }))
+            .catch(this.handleError);
     }
 
     handleStatusChange(id) {
@@ -43,15 +39,15 @@ class App extends Component {
     }
 
     handleAdd(title) {
-        let todo = {
-            id: this.nextId(),
-            title,
-            completed: false
-        };
+        axios.post('api/todos', { title })
+            .then(response => response.data)
+            .then(todo => {
+                let todos = [...this.state.todos, todo];
+                this.setState({todos});
+            })
+            .catch(this.handleError);
 
-        let todos = [...this.state.todos, todo];
 
-        this.setState({todos});
     }
 
     handleDelete(id){
@@ -69,6 +65,10 @@ class App extends Component {
             return todo;
         });
         this.setState({ todos })
+    }
+
+    handleError(error) {
+        console.error(error);
     }
 
     render() {
