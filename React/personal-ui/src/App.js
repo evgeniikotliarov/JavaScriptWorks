@@ -19,7 +19,7 @@ class App extends Component {
       <div className="App">
         <div className="my-form">
           <CSSTransitionGroup
-            transitionNmae="fade"
+            transitionName="fade"
             transitionAppear={true}
             transitionAppearTimeout={1500}
             transitionEnter={false}
