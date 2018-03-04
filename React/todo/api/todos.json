@@ -1,16 +1,16 @@
 [
   {
-    "id":1,
+    "id": 1,
     "title": "Изучить JS",
     "completed": true
   },
   {
-    "id":2,
+    "id": 2,
     "title": "Изучить React",
     "completed": false
   },
   {
-    "id":3,
+    "id": 3,
     "title": "Create App",
     "completed": false
   }
