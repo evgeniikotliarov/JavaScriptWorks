@@ -30,3 +30,33 @@
   width: 500px;
   margin: 0 auto;
 }
+.sign-up-form {
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.mdc-textfield {
+  margin-bottom: 1em;
+}
+.mdc-text-field__input {
+  width: 100%;
+}
+.fade-appear {
+  margin-top: 30px;
+  opacity: .01;
+}
+.fade-appear .fade-appear-active {
+  margin-top: 0;
+  opacity: 1;
+  transition: opacity .5s ease, margin .5s ease;
+}
+.fade-leave {
+  margin-top: 0;
+  opacity: 1;
+}
+.fade-leave .fade-leave-active {
+  margin-top: -30px;
+  opacity: .01;
+  transition: opacity .3s ease, margin .5s ease ;
+}
