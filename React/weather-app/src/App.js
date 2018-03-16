@@ -19,16 +19,15 @@ class App extends Component {
 
     fetchWeatherDate = city => {
       const baseUrl = `http://openweathermap.org/`;
-      const path = `data/2.5/forecast`;
+      const path = `data/2.5/weather`;
       const appId = `0d1080383ad1fd52cb624cb6722ea8fc`;
       const query = `units=metric&lang=ru&APPID=${appId}`;
 
-      fetch(`${baseUrl}${path}?id=${city}&${query}`)
+      fetch(`${baseUrl}${path}?q=${city}&${query}`)
         .then(response => response.json())
         .then(data => {
           const date = new Date();
           const time = date.getHours();
-          console.log(response);
 
           this.setState({
             time,
